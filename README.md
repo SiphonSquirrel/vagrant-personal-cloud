@@ -35,3 +35,8 @@ The first level of directories represent each user's directory. The next level i
 }
 ```
 Then each version directory contains subdirectories for each provider the image is available in. The provider directory contains a single file, the package.box.
+
+Using the Cloud
+---------------
+
+You need to make sure Vagrant 1.5 or greater is installed and need to set the environment variables `VAGRANT_SERVER_URL` to the base URL where the cloud is accessible.
