@@ -27,14 +27,20 @@ In your repo directory (specified in `config.php` as `$repo`), create the follow
 * user2
   * ...
 
-The first level of directories represent each user's directory. The next level is the image for that user. The image directory then contains a meta.json and a subdirectory for each version. The image meta.json looks like this:
+The first level of directories represent each user's directory. The next level is the image for that user. The image directory then contains a `meta.json` and a subdirectory for each version. The image `meta.json` looks like this:
 ```
 {
   "description_markdown":"This is the long description (in Markdown)",
   "short_description":"short description"
 }
 ```
-Then each version directory contains subdirectories for each provider the image is available in. The provider directory contains a single file, the package.box.
+Then each version directory contains subdirectories for each provider the image is available in and optionally a `meta.json`. The version `meta.json` looks like this:
+```
+{
+  "description_markdown":"This is a description of the version."
+}
+```
+The provider directory contains a single file, the package.box.
 
 Using the Cloud
 ---------------
