@@ -1,6 +1,8 @@
 <?php
 header("Content-Type: application/json");
 
+error_log("metadata!");
+
 $versions = array();
 
 foreach (listVersions($repo, $user, $image) as $version) {

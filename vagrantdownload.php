@@ -1,6 +1,6 @@
 <?php
 $file = realpath($repo . "/" . $user . "/" . $image . "/" . $version . "/" . $system . "/package.box");
-	
+
 if (!$file) {
   header("HTTP/1.0 404 Not Found");
   print "File not found.";
@@ -23,5 +23,6 @@ header('Content-Length: ' . filesize($file));
 ob_end_clean();
 flush();
 readfile($file);
-exit;	
+flush();
+exit;
 ?>
